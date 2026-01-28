@@ -122,7 +122,6 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     position: relative;
-    /* For loading state if needed */
 }
 
 #flag-img {
@@ -281,12 +280,14 @@ body {
     }
 }
 
-/* Game Over Screen */
+/* EXPLICIT GAME OVER STYLES */
 #game-over {
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     z-index: 10;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 #game-over h2 {
@@ -321,8 +322,43 @@ body {
     color: var(--text-primary);
 }
 
-#final-message {
+.final-message {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.stats-breakdown {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.stat-row .continent-name {
+    color: var(--text-secondary);
+}
+
+.stat-row .continent-score {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+@media (min-width: 500px) {
+    .stats-breakdown {
+        grid-template-columns: 1fr 1fr;
+    }
 }

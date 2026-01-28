@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Banderas</title>
+    <title>Flag Quiz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,30 +18,30 @@
     <main id="game-app">
         <header class="stats-bar">
             <div class="stat-item">
-                <span class="label">Puntos</span>
+                <span class="label">Score</span>
                 <span class="value" id="score">0</span>
             </div>
             <div class="app-title">
-                <h1>BANDERAS</h1>
+                <h1>FLAGS</h1>
             </div>
             <div class="stat-item">
-                <span class="label">Progreso</span>
+                <span class="label">Progress</span>
                 <span class="value" id="count">0/0</span>
             </div>
         </header>
 
         <!-- Game Over Section -->
         <section id="game-over" class="glass-panel hidden">
-            <h2>¡Juego Terminado!</h2>
+            <h2>Game Over!</h2>
             <div class="final-score">
-                <span class="label">Puntaje Final</span>
+                <span class="label">Final Score</span>
                 <span class="value" id="final-score-value">0</span>
             </div>
             <div id="stats-breakdown" class="stats-breakdown">
                 <!-- Javascript will populate this -->
             </div>
             <p id="final-message" class="final-message"></p>
-            <button id="restart-btn" class="primary-btn">Jugar de Nuevo</button>
+            <button id="restart-btn" class="primary-btn">Play Again</button>
         </section>
 
         <section id="game-container" class="glass-panel">
@@ -63,7 +63,7 @@
             </div>
 
             <div class="feedback-area hidden" id="feedback">
-                <button id="next-btn" class="primary-btn">Siguiente</button>
+                <button id="next-btn" class="primary-btn">Next</button>
             </div>
         </section>
     </main>

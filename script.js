@@ -116,12 +116,12 @@ function endGame() {
 
     // Set Message
     let msg = "";
-    if (percentage === 100) msg = "¡Perfecto!";
-    else if (percentage >= 90) msg = "¡Épico!";
-    else if (percentage >= 80) msg = "¡Muy bueno!";
-    else if (percentage >= 70) msg = "Bien";
-    else if (percentage >= 60) msg = "Aceptable";
-    else msg = "Falta practicar más";
+    if (percentage === 100) msg = "Perfect!";
+    else if (percentage >= 90) msg = "Epic!";
+    else if (percentage >= 80) msg = "Very Good!";
+    else if (percentage >= 70) msg = "Good";
+    else if (percentage >= 60) msg = "Acceptable";
+    else msg = "Needs practice";
 
     finalMessage.textContent = msg;
 
