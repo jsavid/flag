@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Banderas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <div id="flash-overlay" class="flash-overlay"></div>
+    <main id="game-app">
+        <header class="stats-bar">
+            <div class="stat-item">
+                <span class="label">Puntos</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="app-title">
+                <h1>BANDERAS</h1>
+            </div>
+            <div class="stat-item">
+                <span class="label">Progreso</span>
+                <span class="value" id="count">0/0</span>
+            </div>
+        </header>
+
+        <!-- Game Over Section -->
+        <section id="game-over" class="glass-panel hidden">
+            <h2>¡Juego Terminado!</h2>
+            <div class="final-score">
+                <span class="label">Puntaje Final</span>
+                <span class="value" id="final-score-value">0</span>
+            </div>
+            <p id="final-message">¡Eres un experto en geografía!</p>
+            <button id="restart-btn" class="primary-btn">Jugar de Nuevo</button>
+        </section>
+
+        <section id="game-container" class="glass-panel">
+            <div class="loading-overlay hidden" id="loading">
+                <div class="spinner"></div>
+            </div>
+
+            <div class="flag-stage">
+                <div class="flag-wrapper">
+                    <img id="flag-img" src="" alt="Flag to guess" draggable="false">
+                </div>
+                <div class="continent-hint" id="continent-hint">
+                    <!-- Javascript will populate this -->
+                </div>
+            </div>
+
+            <div class="options-grid" id="options-container">
+                <!-- Buttons will be injected here -->
+            </div>
+
+            <div class="feedback-area hidden" id="feedback">
+                <button id="next-btn" class="primary-btn">Siguiente</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
