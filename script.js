@@ -61,8 +61,6 @@ const restartBtn = document.getElementById('restart-btn');
 const flagImg = document.getElementById('flag-img');
 const continentHint = document.getElementById('continent-hint');
 const optionsContainer = document.getElementById('options-container');
-const feedbackArea = document.getElementById('feedback');
-const nextBtn = document.getElementById('next-btn');
 const flashOverlay = document.getElementById('flash-overlay');
 
 const TOTAL_QUESTIONS = 20;
@@ -91,7 +89,6 @@ function init() {
 
     generateQuestion();
 
-    nextBtn.onclick = () => generateQuestion();
     restartBtn.onclick = () => init();
 }
 
@@ -167,7 +164,6 @@ function generateQuestion() {
 
     // Reset UI
     isAnswered = false;
-    feedbackArea.classList.add('hidden');
     optionsContainer.innerHTML = '';
     flagImg.style.opacity = '0';
 
@@ -250,8 +246,10 @@ function handleAnswer(selectedCountry, btnElement) {
     updateScoreUI();
 
     allButtons.forEach(btn => btn.disabled = true);
-    feedbackArea.classList.remove('hidden');
-    nextBtn.focus();
+
+    setTimeout(() => {
+        generateQuestion();
+    }, 1000);
 }
 
 init();
